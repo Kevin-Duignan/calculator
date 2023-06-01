@@ -63,19 +63,23 @@ function deleteDigit() {
 }
 
 function changeSign() {
-	if (display.textContent[0] === "-") {
+	// "-"
+	if (display.textContent !== "-") {
+		display.textContent = "0";
+		// "-34...."
+	} else if (display.textContent[0] === "-") {
 		// Remove negative sign
 		display.textContent = display.textContent.substring(1);
+		// "0" or "213...." but after computation (equal key or operator pressed)
+	} else if (display.textContent == "0" || justComputed) {
+		display.textContent = "-";
+		justComputed = false;
+		// "123..."
 	} else {
-		if (display.textContent == "0" || justComputed) {
-			display.textContent = "-";
-			justComputed = false;
-		} else {
-			// Split str into array then add negative sign then join together
-			let numberArr = display.textContent.split("");
-			numberArr.splice(0, 0, "-");
-			display.textContent = numberArr.join("");
-		}
+		// Split str into array then add negative sign then join together
+		let numberArr = display.textContent.split("");
+		numberArr.splice(0, 0, "-");
+		display.textContent = numberArr.join("");
 	}
 }
 
