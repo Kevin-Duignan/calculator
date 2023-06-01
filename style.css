@@ -154,6 +154,7 @@ footer {
 	position: fixed;
 	bottom: 0;
 	padding: 3rem;
+	z-index: -99;
 }
 
 footer a {
