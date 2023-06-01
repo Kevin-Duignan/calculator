@@ -44,6 +44,10 @@ body {
 	justify-content: right;
 }
 
+button {
+	font-weight: bold;
+	color: var(--primary-color);
+}
 .modifiers {
 	display: flex;
 	justify-content: space-around;
@@ -88,7 +92,6 @@ body {
 	font-size: 3em;
 	border: none;
 	background-color: var(--button-color);
-	color: #333;
 	margin: 2px;
 }
 
@@ -126,7 +129,7 @@ body {
 #subtract,
 #add {
 	background-color: var(--button-color);
-	color: #333;
+
 	flex: 1;
 }
 
