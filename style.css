@@ -1,0 +1,141 @@
+:root {
+	--primary-color: #606060;
+	--button-color: #e0e0e0;
+	--active-color: #bbbbbb;
+}
+
+* {
+	border-radius: 3%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-color);
+	font-family: Arial, sans-serif;
+	height: 100vh;
+}
+
+.calculator {
+	width: min(30vh, 800px);
+	min-height: 700px;
+	background-color: #e9e9e9;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.display {
+	width: 100%;
+	background-color: var(--button-color);
+	border-radius: 5px;
+	padding: 20px;
+	text-align: right;
+	font-size: 5em;
+	font-weight: bold;
+	color: #666;
+	box-sizing: border-box;
+	display: flex;
+	word-wrap: break-word;
+	word-break: break-all;
+	justify-content: right;
+}
+
+.modifiers {
+	display: flex;
+	justify-content: space-around;
+	margin: 10px 0;
+}
+
+.modifiers button {
+	padding: 35px 15px;
+	border: none;
+	font-size: 2em;
+	height: 100%;
+	width: 100%;
+	margin: 2px;
+}
+
+.keys {
+	width: 100%;
+	height: 60%;
+	overflow: s;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+}
+
+.operator-keys {
+	width: 25%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.number-keys {
+	width: 75%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: left;
+}
+
+.number-keys button {
+	width: 30%;
+	height: 100px;
+	font-size: 3em;
+	border: none;
+	background-color: var(--button-color);
+	color: #333;
+	margin: 2px;
+}
+
+.operator-keys button {
+	width: 100%;
+	font-size: 3em;
+	border: none;
+	margin: 2px;
+	height: 100px;
+}
+
+#clear {
+	background-color: #ff0000;
+	color: #fff;
+	width: 40%;
+}
+
+#delete {
+	background-color: #6b6b6b;
+	color: #fff;
+	width: 40%;
+}
+
+#equals {
+	background-color: var(--button-color);
+	padding: 26px 15px;
+	font-size: 3em;
+}
+#divide,
+#multiply,
+#subtract,
+#add {
+	background-color: var(--button-color);
+	color: #333;
+	flex: 1;
+}
+
+#divide:active,
+#multiply:active,
+#subtract:active,
+#add:active,
+#equals:active {
+	background-color: var(--active-color);
+}
+
+#clear:active,
+#delete:active {
+	background-color: darkred;
+}
+
+button:active {
+	background-color: var(--active-color);
+}
