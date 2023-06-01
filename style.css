@@ -16,11 +16,12 @@ body {
 	font-family: Arial, sans-serif;
 	height: 100vh;
 	overflow: hidden;
+	font-size: 20px;
 }
 
 .calculator {
-	width: min(80vw, 500px);
-	min-height: 700px;
+	width: min(90vw, 700px);
+	min-height: 1000px;
 	background-color: var(--bg-color);
 	border-radius: 5px;
 	padding: 20px;
@@ -33,7 +34,7 @@ body {
 	border-radius: 5px;
 	padding: 20px;
 	text-align: right;
-	font-size: 5em;
+	font-size: 7em;
 	font-weight: bold;
 	color: #666;
 	box-sizing: border-box;
@@ -83,7 +84,7 @@ body {
 
 .number-keys button {
 	width: 30%;
-	height: 100px;
+	height: 150px;
 	font-size: 3em;
 	border: none;
 	background-color: var(--button-color);
@@ -96,7 +97,7 @@ body {
 	font-size: 3em;
 	border: none;
 	margin: 2px;
-	height: 100px;
+	height: 150px;
 }
 
 #clear {
@@ -115,6 +116,10 @@ body {
 	background-color: var(--button-color);
 	padding: 26px 15px;
 	font-size: 3em;
+}
+
+.modifiers button {
+	height: 150px;
 }
 #divide,
 #multiply,
