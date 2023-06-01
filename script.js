@@ -64,10 +64,10 @@ function deleteDigit() {
 
 function changeSign() {
 	// "-"
-	if (display.textContent !== "-") {
+	if (display.textContent == "-") {
 		display.textContent = "0";
 		// "-34...."
-	} else if (display.textContent[0] === "-") {
+	} else if (display.textContent[0] == "-") {
 		// Remove negative sign
 		display.textContent = display.textContent.substring(1);
 		// "0" or "213...." but after computation (equal key or operator pressed)
@@ -82,7 +82,6 @@ function changeSign() {
 		display.textContent = numberArr.join("");
 	}
 }
-
 function operatorSelection(event) {
 	// Check for chain equations, compute previous two-number equation
 	if (currentOperator !== null) {
