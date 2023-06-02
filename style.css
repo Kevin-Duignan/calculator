@@ -15,7 +15,7 @@ body {
 	background-color: var(--primary-color);
 	font-family: Arial, sans-serif;
 	height: 100vh;
-	overflow: hidden;
+	overflow: scroll;
 	font-size: 20px;
 }
 
@@ -165,4 +165,19 @@ footer a {
 
 footer a:hover {
 	text-decoration-color: var(--active-color);
+}
+
+@media screen and (max-height: 1200px) {
+	/* Styles for laptop screens */
+	body {
+		font-size: 16px;
+	}
+	.calculator {
+		width: min(90vw, 550px);
+		min-height: 700px;
+	}
+	.number-keys button,
+	.modifiers button {
+		height: 100px;
+	}
 }
